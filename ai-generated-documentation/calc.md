@@ -5,9 +5,7 @@
 ---
 ## Calculator Documentation
 
-**1. Overview:**
 
-This Java program implements a simple command-line calculator. It takes two numbers as input from the user, along with an arithmetic operator (+, -, *, /), and then performs the chosen operation to calculate the result. The program also includes error handling to prevent division by zero.
 
 **2. Package/module name:**
 
