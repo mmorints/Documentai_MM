@@ -15,25 +15,7 @@
 
 -  `Calculator.java`
 
-**4. Detailed Documentation:**
 
-**- `main(String[] args)`**
-
-   - **Description:** This is the main method of the program, where execution begins. It prompts the user for input, performs the calculation, and displays the result.
-   - **Parameters:**
-      - `args`: An array of strings representing command-line arguments (not used in this program).
-   - **Return Values:**
-      - `void` (does not return a value)
-   - **Important Logic:**
-      - Creates a `Scanner` object to read user input from the console.
-      - Prompts the user to enter two numbers and stores them in variables `a` and `b`.
-      - Prompts the user to enter an arithmetic operator and stores it in the `op` variable.
-      - Uses a `switch` statement to perform the calculation based on the operator:
-         - `+`: Adds `a` and `b`.
-         - `-`: Subtracts `b` from `a`.
-         - `*`: Multiplies `a` and `b`.
-         - `/`: Divides `a` by `b`, but checks if `b` is zero first. If it is, it prints an error message and exits the program using `return`.
-      - If the operation is successful, it stores the result in the `result` variable and does not explicitly display it.
 
 **5. Pseudo Code:**
 
