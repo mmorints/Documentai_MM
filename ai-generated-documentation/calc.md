@@ -5,37 +5,35 @@
 ---
 ## Calculator Documentation
 
-**1. Overview:**
+**1. Overview:** 
 
-This Java program implements a simple command-line calculator. It takes two numbers as input from the user, along with an arithmetic operator (+, -, *, /), and then performs the chosen operation to calculate the result. The program also includes error handling to prevent division by zero.
+This Java program implements a simple command-line calculator that performs basic arithmetic operations (+, -, *, /) on two numbers provided by the user. It includes error handling for division by zero.
 
-**2. Package/module name:**
+**2. Package/module name:**  `java.util` (for `Scanner`)
 
--  `default` (no explicit package declared)
-
-**3. Class/file name:**
-
--  `Calculator.java`
+**3. Class/file name:** `Calculator.java`
 
 **4. Detailed Documentation:**
 
-**- `main(String[] args)`**
+   - **Function/Method: `main(String[] args)`**
+     - **Description:** This is the entry point of the program. It initializes a `Scanner` object to read user input, prompts the user for two numbers and an operation, performs the calculation based on the chosen operation, and displays the result.
+     - **Parameters:** 
+       - `String[] args`: Command-line arguments (not used in this program).
+     - **Return Values:** None.
+     - **Important Logic:**
+       - Uses a `Scanner` to read user input for two numbers and an operation character.
+       - Uses a `switch` statement to perform the calculation based on the chosen operation.
+       - Handles division by zero by checking if the second number is zero before performing the division. If it is, it prints an error message and exits the program using `return`.
 
-   - **Description:** This is the main method of the program, where execution begins. It prompts the user for input, performs the calculation, and displays the result.
-   - **Parameters:**
-      - `args`: An array of strings representing command-line arguments (not used in this program).
-   - **Return Values:**
-      - `void` (does not return a value)
-   - **Important Logic:**
-      - Creates a `Scanner` object to read user input from the console.
-      - Prompts the user to enter two numbers and stores them in variables `a` and `b`.
-      - Prompts the user to enter an arithmetic operator and stores it in the `op` variable.
-      - Uses a `switch` statement to perform the calculation based on the operator:
-         - `+`: Adds `a` and `b`.
-         - `-`: Subtracts `b` from `a`.
-         - `*`: Multiplies `a` and `b`.
-         - `/`: Divides `a` by `b`, but checks if `b` is zero first. If it is, it prints an error message and exits the program using `return`.
-      - If the operation is successful, it stores the result in the `result` variable and does not explicitly display it.
+   - **Function/Method: `calculate(double a, double b, char op)`** (This function could be extracted for better code organization)
+     - **Description:** This function performs the actual calculation based on the given operation. 
+     - **Parameters:**
+       - `a`: The first number.
+       - `b`: The second number.
+       - `op`: The operation character (+, -, *, /).
+     - **Return Values:**  The result of the calculation as a double.
+     - **Important Logic:**
+       - Uses conditional statements (`if`, `else if`) to perform the calculation based on the `op` parameter.
 
 **5. Pseudo Code:**
 
@@ -44,23 +42,19 @@ This Java program implements a simple command-line calculator. It takes two numb
 
 // Method: main(String[] args)
   1. Create a Scanner object to read user input.
-  2. Prompt the user to enter the first number and store it in variable 'a'.
-  3. Prompt the user to enter the second number and store it in variable 'b'.
-  4. Prompt the user to enter an arithmetic operator and store it in variable 'op'.
-  5. Use a switch statement to perform the calculation based on the value of 'op':
+  2. Print "Simple Java Calculator" message.
+  3. Prompt the user to enter the first number and store it in variable 'a'.
+  4. Prompt the user to enter the second number and store it in variable 'b'.
+  5. Prompt the user to choose an operation (+, -, *, /) and store it in variable 'op'.
+  6. Use a switch statement based on the value of 'op':
      - Case '+': Add 'a' and 'b', store the result in 'result'.
      - Case '-': Subtract 'b' from 'a', store the result in 'result'.
      - Case '*': Multiply 'a' and 'b', store the result in 'result'.
-     - Case '/':
+     - Case '/': 
         - Check if 'b' is equal to zero.
-        - If 'b' is zero:
-           - Print an error message "Cannot divide by zero!".
-           - Exit the program.
-        - Otherwise: Divide 'a' by 'b', store the result in 'result'.
-  6. End of switch statement.
-  7. The program does not explicitly display the 'result'.
-
-
+          - If yes, print "Cannot divide by zero!" and exit the program.
+          - If no, divide 'a' by 'b', store the result in 'result'.
+  7. Print the calculated result.
 
 ```
 
@@ -68,12 +62,7 @@ This Java program implements a simple command-line calculator. It takes two numb
 
 **Dependencies and Libraries:**
 
-- **java.util.Scanner:** This class is used for reading user input from the console. It's a built-in part of the Java standard library.
-
-**Equivalent Libraries in Other Languages:**
-
-- **Python:** `input()` function for reading user input.
-- **C++:** `std::cin` object for reading user input.
+* **java.util.Scanner:** This class is used for reading user input from the console. 
 
 
-
+Let me know if you have any other questions or need further clarification on any aspect of this documentation.
